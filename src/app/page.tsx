@@ -62,15 +62,15 @@ export default function Home() {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={140}
-                    height={140}
-                    style={{ objectFit: "cover", width: 140, height: 140, flexShrink: 0 }}
+                    width={180}
+                    height={180}
+                    style={{ objectFit: "cover", borderRadius: "20px 0 0 20px", flexShrink: 0 }}
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = "https://via.placeholder.com/140x140?text=Project";
                     }}
                   />
-                  <div>
+                  <div className="work-content">
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
                     <small style={{ color: "#bfa46f", fontWeight: 500 }}>
